@@ -1,0 +1,27 @@
+{
+    "name": "bmap-to-json",
+    "version": "0.0.0",
+    "description": "Library for converting BMAP to JSON and JSON to BMAP. BMAP is the file format of Boring Man maps.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "test": "test",
+        "build": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Boring-Man-Tools/bmap-to-json.git"
+    },
+    "keywords": [
+        "boring-man",
+        "bmap"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Boring-Man-Tools/bmap-to-json/issues"
+    },
+    "homepage": "https://github.com/Boring-Man-Tools/bmap-to-json#readme"
+}
