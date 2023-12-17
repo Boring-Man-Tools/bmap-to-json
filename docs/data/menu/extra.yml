@@ -1,0 +1,6 @@
+---
+header:
+  - name: GitHub
+    ref: https://github.com/Boring-Man-Tools/bmap-to-json
+    icon: gdoc_github
+    external: true
