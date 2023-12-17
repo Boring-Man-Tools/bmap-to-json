@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /tags/*
-
-Sitemap: https://boring-man-tools.github.io/bmap-to-json/sitemap.xml
