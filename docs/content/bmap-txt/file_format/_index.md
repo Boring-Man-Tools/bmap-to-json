@@ -10,7 +10,7 @@ Every map created via the map editor of Boring Man - OTSC is composed of 5 lines
    - If the ID is -1, it means it is not on the workshop.
 4. A JSON containing all the objects of the map and the configuration of the map.
    - This JSON will always contain a `Config` key, even if the map is empty.
-5. A JSON containing the MD5 file checksums for each image used in the map.
+5. A JSON containing the [MD5 file checksums](/bmap-to-json/bmap-txt/glossary/#md5-checksum) for each image used in the map.
    - This JSON can be empty (`{}`) if no tiles is put on the map.
 
 ## Map objects and map configuration
