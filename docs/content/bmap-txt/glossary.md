@@ -4,6 +4,20 @@ title: "Glossary"
 
 {{< toc >}}
 
+## Decals
+
+**Decals** refer to graphical elements or textures that are applied to surfaces within the game environment.
+
+Decals are used to add detail, realism, and variety to surfaces such as walls, floors, or objects. They are typically flat and can represent a wide range of visual elements, including stains, markings, bullet holes, blood splatters, graffiti, and more.
+
+## GML Colors
+
+**GML Colors**, or GameMaker Language colors, are colors that are represented by a single number, as opposed to 3 numbers for RGB colors.
+
+A GML color is computed from a RGB color thanks to this formula:
+
+`gml = rgb.r + (rgb.g * 256) + (rgb.b * 65536)`
+
 ## MD5 Checksum
 
 **MD5**, or Message Digest Algorithm 5, is a cryptographic hash function designed to produce a fixed-size, 128-bit hash value from any input data. MD5 is commonly used for checksums and data integrity verification.
