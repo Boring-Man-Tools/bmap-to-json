@@ -1,393 +1,563 @@
+---
+title: "Map Configuration"
+---
+
+{{< toc >}}
+
+## Full map configuration example
+
 Example of a map configuration with all fields:
 
 ```
 "Config": {
-    "Ambience": "9",
-    "Author": "Violet",
-    "Bkgd1Amb": "8",
-    "Bkgd1AmbCol": "4210752",
-    "Bkgd1File": "background2.png",
-    "Bkgd1HPara": "1",
-    "Bkgd1Hspeed": "0",
-    "Bkgd1MD5": "92043a581db0c50efb7856aa840f885c",
-    "Bkgd1VPara": "0",
-    "Bkgd1Vspeed": "0",
-    "Bkgd1XOff": "0",
-    "Bkgd1XTile": "1",
-    "Bkgd1YOff": "0",
-    "Bkgd1YTile": "1",
-    "Bkgd2File": "",
-    "Bkgd2HPara": "0",
-    "Bkgd2Hspeed": "0",
-    "Bkgd2MD5": "",
-    "Bkgd2VPara": "0",
-    "Bkgd2Vspeed": "0",
-    "Bkgd2XOff": "0",
-    "Bkgd2XTile": "1",
-    "Bkgd2YOff": "0",
-    "Bkgd2YTile": "1",
-    "Bkgd3File": "",
-    "Bkgd3HPara": "0",
-    "Bkgd3Hspeed": "0",
-    "Bkgd3MD5": "",
-    "Bkgd3VPara": "0",
-    "Bkgd3Vspeed": "0",
-    "Bkgd3XOff": "0",
-    "Bkgd3XTile": "1",
-    "Bkgd3YOff": "0",
-    "Bkgd3YTile": "1",
-    "BkgdColor1": "4982848",
-    "BkgdColor2": "3666080",
-    "Climb": "0",
-    "DecalDepth": "-200",
-    "DivChc": "25",
-    "MapHeight": "2050",
+    // Map
+    "Name": "The best map ever",
+    "Author": "Shaigro",
     "MapWidth": "6528",
-    "Name": "D-Day",
-    "Preview": "BoringManGame_2019-07-31_01-28-42.png",
-    "SeaDepth": "2",
+    "MapHeight": "2050",
+    "Ambience": "9",
+
+    // Worskhop
+    "Preview": "thumbnail_of_the_year.png",
+    "Workshop": "1818514910",
+
+    // Sea
     "SeaLevel": "1920",
     "SeaType": "0",
+    "SeaDepth": "2",
+
+    // Background 1
+    "Bkgd1File": "background2.png",
+    "Bkgd1MD5": "92043a581db0c50efb7856aa840f885c",
+    "Bkgd1Hspeed": "0",
+    "Bkgd1Vspeed": "0",
+    "Bkgd1HPara": "1",
+    "Bkgd1VPara": "0",
+    "Bkgd1XTile": "1",
+    "Bkgd1YTile": "1",
+    "Bkgd1XOff": "0",
+    "Bkgd1YOff": "0",
+
+    // Background 2
+    "Bkgd2File": "",
+    "Bkgd2MD5": "",
+    "Bkgd2Hspeed": "0",
+    "Bkgd2Vspeed": "0",
+    "Bkgd2HPara": "0",
+    "Bkgd2VPara": "0",
+    "Bkgd2XTile": "1",
+    "Bkgd2YTile": "1",
+    "Bkgd2XOff": "0",
+    "Bkgd2YOff": "0",
+
+    // Foreground
+    "Bkgd3File": "",
+    "Bkgd3MD5": "",
+    "Bkgd3Hspeed": "0",
+    "Bkgd3Vspeed": "0",
+    "Bkgd3HPara": "0",
+    "Bkgd3VPara": "0",
+    "Bkgd3XTile": "1",
+    "Bkgd3YTile": "1",
+    "Bkgd3XOff": "0",
+    "Bkgd3YOff": "0",
+
+    // Color background
+    "BkgdColor1": "4982848",
+    "BkgdColor2": "3666080",
+    "Bkgd1AmbCol": "4210752",
+    "Bkgd1Amb": "8",
+
+    // Misc
+    "Climb": "0",
+    "DivChc": "25",
+    "DecalDepth": "-200",
+    "ShowPath": "0",
     "ShowCol": "0",
     "ShowLog": "0",
-    "ShowPath": "0",
+
+    // Other
     "TotalGates": "934",
-    "Workshop": "1818514010"
 }
 ```
 
 ## Properties
 
-### Ambience
+### Map properties
 
-#### Description
+#### Name
 
-#### Values
+**Description:** Name of the map.
 
-### Author
+**Value:** Any string. Default is "Boring Map". Unknown if there is a limit of characters.
 
-#### Description
+#### Author
 
-Author of the map
+**Description:** Author of the map.
 
-#### Values
+**Value:** Any string. Default is the current player name. Unknown if there is a limit of characters.
 
-Author of the map.
+#### MapWidth
 
-### Bkgd1Amb
+**Description:** Width of the map.
 
-#### Description
+**Value:** `0 < map_width < ... `
 
-#### Values
+#### MapHeight
 
-### Bkgd1AmbCol
+**Description:** Height of the map.
 
-#### Description
+**Value:** `0 < map_height < ... `
 
-#### Values
+#### Ambience
 
-### Bkgd1File
+**Description:** Ambience of the map.
 
-#### Description
+**Value:** Possible values are:
 
-#### Values
+- `0`: Silence
+- `1`: Fields
+- `2`: Evening
+- `3`: City
+- `4`: Desert
+- `5`: Factory
+- `6`: Ocean
+- `7`: Cold
+- `8`: Caves
+- `9`: Rain
+- `10`: Waterfall
+- `11`: Strange
+- `12`: Railroad
+- `13`: Blizzard
 
-### Bkgd1HPara
+### Workshop properties
 
-#### Description
+#### Preview
 
-#### Values
+**Description:** Filename of the preview of the map. The preview displays on Steam workshop when looking for the map. The image has to be a `.png` if it is defined.
 
-### Bkgd1Hspeed
+**Value:**
 
-#### Description
+- `*.png`: Preview is defined
+- ` `: Preview is not defined
 
-#### Values
+#### Workshop
 
-### Bkgd1MD5
+**Description:** Workshop ID of the map.
 
-#### Description
+**Value:** Possible values:
 
-#### Values
+- `-1`: Not on the workshop.
+- `0 < workshop_id `: On the workshop.
 
-### Bkgd1VPara
+### Sea properties
 
-#### Description
+#### SeaLevel
 
-#### Values
+**Description:** Determines where the sea is rendered on the Y axis.
 
-### Bkgd1Vspeed
+**Value:**
 
-#### Description
+- `0 < sea_level < map_height`: The sea level is enabled.
+- `sea_level <= 0 || map_height < sea_level`: The sea level is disabled.
 
-#### Values
+#### SeaType
 
-### Bkgd1XOff
+**Description:** Type of the sea.
 
-#### Description
+**Value:**
 
-#### Values
+- `0`: Water
+- `1`: Lava
 
-### Bkgd1XTile
+#### SeaDepth
 
-#### Description
+**Description:** Depth of the layer the sea is on.
 
-#### Values
+**Value:**
 
-### Bkgd1YOff
+- `sea_depth <= 0`: Behind the player.
+- `0 < sea_depth`: In front of the player.
 
-#### Description
+### Background 1 properties
 
-#### Values
+The background 1 is an image that can be put on a layer behind any assets, tiles or players.
 
-### Bkgd1YTile
+The background 1 is always behind the background 2.
 
-#### Description
+#### Bkgd1File
 
-#### Values
+**Description:** Filename of the background 1 image. The image has to be a `.png` if it is defined.
 
-### Bkgd2File
+- `*.png`: The background 1 is based on the provided image.
+- ` `: There is no background 1.
 
-#### Description
+#### Bkgd1MD5
 
-#### Values
+**Description:** [MD5 checksum](/bmap-to-json/bmap-txt/glossary/#md5-checksum) of the image. It is used to verify that the image downloaded from the workshop is correct.
 
-### Bkgd2HPara
+**Value:** `md5.length == 32`: It's always a 128-bit value.
 
-#### Description
+#### Bkgd1Hspeed
 
-#### Values
+**Description:** Determines how fast the image is moving on the X axis.
 
-### Bkgd2Hspeed
+**Value:**
 
-#### Description
+- `speed < 0`: The image moves from right to left.
+- `speed == 0`: The image doesn't move.
+- `0 < speed`: The image moves from left to right.
 
-#### Values
+#### Bkgd1Vspeed
 
-### Bkgd2MD5
+**Description:** Determines how fast the image is moving on the Y axis.
 
-#### Description
+**Value:**
 
-#### Values
+- `speed < 0`: The image moves from bottom to top.
+- `speed == 0`: The image doesn't move.
+- `0 < speed`: The image moves from top to bottom.
 
-### Bkgd2VPara
+#### Bkgd1HPara
 
-#### Description
+**Description:** Define how the [parallax](/bmap-to-json/bmap-txt/glossary/#parallax) work for the image on the X axis.
 
-#### Values
+**Value:**
 
-### Bkgd2Vspeed
+- `0`: Static
+- `1`: Full-Parallax
+- `2`: Half-Parallax
+- `3`: Absolute
 
-#### Description
+#### Bkgd1VPara
 
-#### Values
+**Description:** Define how the [parallax](/bmap-to-json/bmap-txt/glossary/#parallax) work for the image on the Y axis.
 
-### Bkgd2XOff
+**Value:**
 
-#### Description
+- `0`: Static
+- `1`: Full-Parallax
+- `2`: Half-Parallax
+- `3`: Absolute
 
-#### Values
+#### Bkgd1XTile
 
-### Bkgd2XTile
+**Description:** Determines whether the background 1 image should repeat itself on the X axis.
 
-#### Description
+**Value:**
 
-#### Values
+- `0`: Image does not repeat.
+- `1`: Image does repeat.
 
-### Bkgd2YOff
+#### Bkgd1YTile
 
-#### Description
+**Description:** Determines whether the background 1 image should repeat itself on the Y axis.
 
-#### Values
+**Value:**
 
-### Bkgd2YTile
+- `0`: Image does not repeat.
+- `1`: Image does repeat.
 
-#### Description
+#### Bkgd1XOff
 
-#### Values
+**Description:** Define what is the offset of the background 1 image on the X axis.
 
-### Bkgd3File
+**Value:** Any integer. Unknown limit.
 
-#### Description
+- `offset < 0`: Left of the image goes outside the map.
+- `0 <= offset < map_width - width_of_image`: Image is fully visible in the map.
+- `map_width - width_of_image <= offset`: Right of the image goes outside the map.
 
-#### Values
+#### Bkgd1YOff
 
-### Bkgd3HPara
+**Description:** Define what is the offset of the background 1 image on the Y axis.
 
-#### Description
+**Value:** Any integer. Unknown limit.
 
-#### Values
+- `offset < 0`: Top of the image goes outside the map.
+- `0 <= offset < map_height - height_of_image`: Image is fully visible in the map.
+- `map_height - height_of_image <= offset`: Bottom of the image goes outside the map.
 
-### Bkgd3Hspeed
+### Background 2 properties
 
-#### Description
+The background 2 is an image that can be put on a layer behind any assets, tiles or players.
 
-#### Values
+The background 2 is always above the background 1.
 
-### Bkgd3MD5
+#### Bkgd2File
 
-#### Description
+**Description:** Filename of the background 2 image. The image has to be a `.png` if it is defined.
 
-#### Values
+- `*.png`: The background 2 is based on the provided image.
+- ` `: There is no background 2.
 
-### Bkgd3VPara
+#### Bkgd2MD5
 
-#### Description
+**Description:** [MD5 checksum](/bmap-to-json/bmap-txt/glossary/#md5-checksum) of the image. It is used to verify that the image downloaded from the workshop is correct.
 
-#### Values
+**Value:** `md5.length == 32`: It's always a 128-bit value.
 
-### Bkgd3Vspeed
+#### Bkgd2Hspeed
 
-#### Description
+**Description:** Determines how fast the image is moving on the X axis.
 
-#### Values
+**Value:**
 
-### Bkgd3XOff
+- `speed < 0`: The image moves from right to left.
+- `speed == 0`: The image doesn't move.
+- `0 < speed`: The image moves from left to right.
 
-#### Description
+#### Bkgd2Vspeed
 
-#### Values
+**Description:** Determines how fast the image is moving on the Y axis.
 
-### Bkgd3XTile
+**Value:**
 
-#### Description
+- `speed < 0`: The image moves from bottom to top.
+- `speed == 0`: The image doesn't move.
+- `0 < speed`: The image moves from top to bottom.
 
-#### Values
+#### Bkgd2HPara
 
-### Bkgd3YOff
+**Description:** Define how the [parallax](/bmap-to-json/bmap-txt/glossary/#parallax) work for the image on the X axis.
 
-#### Description
+**Value:**
 
-#### Values
+- `0`: Static
+- `1`: Full-Parallax
+- `2`: Half-Parallax
+- `3`: Absolute
 
-### Bkgd3YTile
+#### Bkgd2VPara
 
-#### Description
+**Description:** Define how the [parallax](/bmap-to-json/bmap-txt/glossary/#parallax) work for the image on the Y axis.
 
-#### Values
+**Value:**
 
-### BkgdColor1
+- `0`: Static
+- `1`: Full-Parallax
+- `2`: Half-Parallax
+- `3`: Absolute
 
-#### Description
+#### Bkgd2XTile
 
-#### Values
+**Description:** Determines whether the background 2 image should repeat itself on the X axis.
 
-### BkgdColor2
+**Value:**
 
-#### Description
+- `0`: Image does not repeat.
+- `1`: Image does repeat.
 
-#### Values
+#### Bkgd2YTile
 
-### Climb
+**Description:** Determines whether the background 2 image should repeat itself on the Y axis.
 
-#### Description
+**Value:**
 
-#### Values
+- `0`: Image does not repeat.
+- `1`: Image does repeat.
 
-### DecalDepth
+#### Bkgd2XOff
 
-#### Description
+**Description:** Define what is the offset of the background 2 image on the X axis.
 
-#### Values
+**Value:** Any integer. Unknown limit.
 
-### DivChc
+- `offset < 0`: Left of the image goes outside the map.
+- `0 <= offset < map_width - width_of_image`: Image is fully visible in the map.
+- `map_width - width_of_image <= offset`: Right of the image goes outside the map.
 
-#### Description
+#### Bkgd2YOff
 
-#### Values
+**Description:** Define what is the offset of the background 2 image on the Y axis.
 
-### MapHeight
+**Value:** Any integer. Unknown limit.
 
-#### Description
+- `offset < 0`: Top of the image goes outside the map.
+- `0 <= offset < map_height - height_of_image`: Image is fully visible in the map.
+- `map_height - height_of_image <= offset`: Bottom of the image goes outside the map.
 
-#### Values
+### Foreground properties
 
-### MapWidth
+The foreground is an image that can be put on a layer above any assets, tiles or players.
 
-#### Description
+#### Bkgd3File
 
-#### Values
+**Description:** Filename of the foreground image. The image has to be a `.png` if it is defined.
 
-### Name
+**Value:**
 
-#### Description
+- `*.png`: The foreground is based on the provided image.
+- ` `: There is no foreground.
 
-#### Values
+#### Bkgd3MD5
 
-### Preview
+**Description:** [MD5 checksum](/bmap-to-json/bmap-txt/glossary/#md5-checksum) of the image. It is used to verify that the image downloaded from the workshop is correct.
 
-#### Description
+**Value:** `md5.length == 32`: It's always a 128-bit value.
 
-#### Values
+#### Bkgd3Hspeed
 
-### SeaDepth
+**Description:** Determines how fast the image is moving on the X axis.
 
-#### Description
+**Value:**
 
-#### Values
+- `speed < 0`: The image moves from right to left.
+- `speed == 0`: The image doesn't move.
+- `0 < speed`: The image moves from left to right.
 
-### SeaLevel
+#### Bkgd3Vspeed
 
-#### Description
+**Description:** Determines how fast the image is moving on the Y axis.
 
-#### Values
+**Value:**
 
-### SeaType
+- `speed < 0`: The image moves from bottom to top.
+- `speed == 0`: The image doesn't move.
+- `0 < speed`: The image moves from top to bottom.
 
-#### Description
+#### Bkgd3HPara
 
-#### Values
+**Description:** Define how the [parallax](/bmap-to-json/bmap-txt/glossary/#parallax) work for the image on the X axis.
 
-### ShowCol
+**Value:**
 
-#### Description
+- `0`: Static
+- `1`: Full-Parallax
+- `2`: Half-Parallax
+- `3`: Absolute
 
-Show collisions as host of the map.
+#### Bkgd3VPara
 
-#### Values
+**Description:** Define how the [parallax](/bmap-to-json/bmap-txt/glossary/#parallax) work for the image on the Y axis.
 
-- `1`: Show collisions
-- `0`: Don't show collisions
+**Value:**
 
-### ShowLog
+- `0`: Static
+- `1`: Full-Parallax
+- `2`: Half-Parallax
+- `3`: Absolute
 
-#### Description
+#### Bkgd3XTile
 
-Show logic as host of the map.
+**Description:** Determines whether the foreground image should repeat itself on the X axis.
 
-#### Values
+**Value:**
 
-- `1`: Show logic
-- `0`: Don't show logic
+- `0`: Image does not repeat.
+- `1`: Image does repeat.
 
-### ShowPath
+#### Bkgd3YTile
 
-#### Description
+**Description:** Determines whether the foreground image should repeat itself on the Y axis.
 
-Show AI path as host of the map.
+**Value:**
 
-#### Values
+- `0`: Image does not repeat.
+- `1`: Image does repeat.
 
-- `1`: Show AI path
+#### Bkgd3XOff
+
+**Description:** Define what is the offset of the foreground image on the X axis.
+
+**Value:** Any integer. Unknown limit.
+
+- `offset < 0`: Left of the image goes outside the map.
+- `0 <= offset < map_width - width_of_image`: Image is fully visible in the map.
+- `map_width - width_of_image <= offset`: Right of the image goes outside the map.
+
+#### Bkgd3YOff
+
+**Description:** Define what is the offset of the foreground image on the Y axis.
+
+**Value:** Any integer. Unknown limit.
+
+- `offset < 0`: Top of the image goes outside the map.
+- `0 <= offset < map_height - height_of_image`: Image is fully visible in the map.
+- `map_height - height_of_image <= offset`: Bottom of the image goes outside the map.
+
+### Color Background properties
+
+#### Gradient
+
+##### BkgdColor1
+
+**Description:** Defines the color at the top of the map to be used for the background gradient. The color is defined as a [GML color](/bmap-to-json/bmap-txt/glossary/#gml-colors).
+
+**Value:** `0 <= color <= 16777215`
+
+##### BkgdColor2
+
+**Description:** Defines the color at the bottom of the map to be used for the background gradient. The color is defined as a [GML color](/bmap-to-json/bmap-txt/glossary/#gml-colors).
+
+**Value:** `0 <= color <= 16777215`
+
+#### Overlay
+
+##### Bkgd1AmbCol
+
+**Description:** Defines the color of the overlay that is on top of the gradient and the background 1 & 2. The color is defined as a [GML color](/bmap-to-json/bmap-txt/glossary/#gml-colors).
+
+**Value:** `0 <= color <= 16777215`
+
+##### Bkgd1Amb
+
+**Description:** Determines the overlay opacity. The percentage is computed with the formula: `percentage = overlay * 10`.
+
+**Value:** `0 <= overlay <= 10`
+
+### Misc properties
+
+#### Climb
+
+**Description:** Determines if the map is a climb map.
+
+**Value:**
+
+- `1`: Is a climb map.
+- `0`: Is not a climb map.
+
+#### DivChc
+
+**Description:** Defines the chance to divert AI for all "Waypoint Divert" asset. Usually, it is a multiple of 5.
+
+**Value:** `0 <= chance <= 100`
+
+#### DecalDepth
+
+**Description:** Depth of the layer the [decals](/bmap-to-json/bmap-txt/glossary/#decals) are on.
+
+**Value:** Any integer. Default is `-200`. Unknown limit.
+
+#### ShowPath
+
+**Description:** Determines if AI path is shown to the host of the map.
+
+**Value:**
+
 - `0`: Don't show AI path
+- `1`: Show AI path
 
-### TotalGates
+#### ShowCol
 
-#### Description
+**Description:** Determines if collisions are shown to the host of the map.
 
-Total number of gates in the map.
+**Value:**
 
-#### Values
+- `0`: Don't show collisions
+- `1`: Show collisions
 
-`0 <=`: Positive number.
+#### ShowLog
 
-### Workshop
+**Description:** Determines if logic is shown to the host of the map.
 
-#### Description
+**Value:**
 
-Workshop ID of the map.
+- `0`: Don't show logic
+- `1`: Show logic
 
-#### Values
+#### TotalGates
 
-- `-1` if not on the workshop
-- `0 <`: Strictly positive if on the workshop
+**Description:** Represents the total number of gates that was ever created. Every time an asset or a tile is placed in the map, the count increase by 1.
+
+**Value:** `0 <= total_gates`
